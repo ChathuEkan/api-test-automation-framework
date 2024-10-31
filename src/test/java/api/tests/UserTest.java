@@ -48,7 +48,7 @@ public class UserTest extends BaseTest
     userpayload.setEmail(faker.internet().safeEmailAddress());
 
     Response response = UserEndPoints.updateUser(userpayload,this.userpayload.getUsername());
-    response.then().log().all().statusCode(300);//Fail test expect : 200
+    response.then().log().all().statusCode(200);
   }
 
   @Test(priority = 4)
